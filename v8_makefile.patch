@@ -1,0 +1,21 @@
+diff --git a/Makefile.android b/Makefile.android
+index aeff01c..869b6e3 100644
+--- a/Makefile.android
++++ b/Makefile.android
+@@ -47,7 +47,15 @@ endif
+ 
+ ifeq ($(ARCH), android_arm)
+   DEFINES  = target_arch=arm v8_target_arch=arm android_target_arch=arm
+-  DEFINES += arm_neon=0 armv7=1
++
++  DEFINES += arm_neon=0
++
++  ifeq ($(armv7), true)
++    DEFINES += armv7=1
++  else
++    DEFINES += armv7=0
++  endif
++
+   TOOLCHAIN_ARCH = arm-linux-androideabi-4.6
+ else
+   ifeq ($(ARCH), android_mipsel)

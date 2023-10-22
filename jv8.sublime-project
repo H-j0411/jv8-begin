@@ -1,0 +1,8 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+      "folder_exclude_patterns": ["obj", "libs", "include", "support", "v8"] }
+	]
+}

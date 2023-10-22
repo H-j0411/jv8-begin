@@ -1,0 +1,9 @@
+libs
+obj
+bin
+_dist
+dist
+
+build_*
+.idea
+*.iml
